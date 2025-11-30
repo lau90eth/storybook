@@ -1,0 +1,88 @@
+/* --------------------------
+   GITHUB DARK THEME (STORYBOOK 10)
+   -------------------------- */
+
+/* LIGHT THEME */
+:root {
+  --sb-bg: #ffffff;
+  --sb-bg-soft: #f6f8fa;
+  --sb-text: #1f2328;
+  --sb-border: #d0d7de;
+  --sb-accent: #0969da;
+}
+
+/* DARK THEME — GitHub style */
+[data-theme="dark"] {
+  --sb-bg: #0d1117;         /* GitHub dark background */
+  --sb-bg-soft: #161b22;    /* Soft panel background */
+  --sb-text: #e6edf3;       /* Light text */
+  --sb-border: #30363d;     /* Subtle border */
+  --sb-accent: #58a6ff;     /* GitHub blue */
+}
+
+/* ////////////////////////////////////////////////////////////////////////// */
+/* APPLY THE THEME */
+/* ////////////////////////////////////////////////////////////////////////// */
+
+body {
+  background-color: var(--sb-bg) !important;
+  color: var(--sb-text) !important;
+}
+
+/* SIDEBAR */
+.sidebar-container, .sidebar-item {
+  background: var(--sb-bg) !important;
+  color: var(--sb-text) !important;
+  border-color: var(--sb-border) !important;
+}
+
+/* STORY AREA */
+.sbdocs-wrapper, .docs-story {
+  background: var(--sb-bg) !important;
+  color: var(--sb-text) !important;
+}
+
+/* PANELS (Controls, Actions, etc.) */
+.tabs, .tabbutton, .docblock-argstable, .docblock-argstable-body {
+  background: var(--sb-bg-soft) !important;
+  color: var(--sb-text) !important;
+}
+
+table td, table th {
+  border-color: var(--sb-border) !important;
+}
+
+/* INPUTS / CONTROLS */
+input, select, textarea {
+  background: var(--sb-bg-soft) !important;
+  border: 1px solid var(--sb-border) !important;
+  color: var(--sb-text) !important;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  background: var(--sb-accent) !important;
+}
+
+/* LINKS */
+a {
+  color: var(--sb-accent) !important;
+}
+
+/* HEADINGS */
+h1, h2, h3, h4, h5 {
+  color: var(--sb-text) !important;
+}
+
+/* SCROLLBAR */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--sb-border);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--sb-accent);
+}

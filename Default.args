@@ -1,0 +1,8 @@
+export const Default: Story = {
+  args: {
+    color: "red",
+    size: 120,
+    border: true,
+    borderRadius: 8,
+  },
+};

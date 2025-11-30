@@ -1,0 +1,39 @@
+import { render, screen } from "@testing-library/react";
+import { describe, it, expect } from "vitest";
+import React from "react";
+import { ColorBox } from "./ColorBox";
+
+describe("ColorBox", () => {
+  it("renders with correct color", () => {
+    render(<ColorBox color="red" size={120} border={true} borderRadius={8} />);
+    const box = screen.getByText("red");
+
+    expect(box).toBeInTheDocument();
+    expect(box).toHaveStyle({ backgroundColor: "red" });
+  });
+
+  it("applies border when enabled", () => {
+    render(<ColorBox color="blue" size={120} border={true} borderRadius={8} />);
+    const box = screen.getByText("blue");
+
+    expect(box).toHaveStyle({ border: "2px solid black" });
+  });
+
+  it("does not apply border when disabled", () => {
+    render(<ColorBox color="green" size={120} border={false} borderRadius={8} />);
+    const box = screen.getByText("green");
+
+    expect(box).toHaveStyle({ border: "none" });
+  });
+
+  it("applies size and borderRadius correctly", () => {
+    render(<ColorBox color="purple" size={150} border={true} borderRadius={20} />);
+    const box = screen.getByText("purple");
+
+    expect(box).toHaveStyle({
+      width: "150px",
+      height: "150px",
+      borderRadius: "20px",
+    });
+  });
+});

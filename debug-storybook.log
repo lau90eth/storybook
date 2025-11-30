@@ -1,0 +1,13 @@
+[11:56:01.294] [INFO] [36mInitializing Storybook[39m
+[11:56:01.834] [DEBUG] Getting package.json info for /home/lau90eth/storybook-sandboxes/react-vite-default-ts/package.json...
+[11:56:01.834] [DEBUG] Getting CLI versions from NPM for storybook...
+[11:56:01.835] [DEBUG] Executing command: yarn npm info storybook --fields version --json
+[11:56:03.421] [INFO] Adding Storybook version 10.1.2 to your project
+[11:56:03.424] [ERROR] Unable to initialize Storybook in this directory.
+
+Storybook couldn't detect a supported framework or configuration for your project. Make sure you're inside a framework project (e.g., React, Vue, Svelte, Angular, Next.js) and that its dependencies are installed.
+
+Tips:
+- Run init in an empty directory or create a new framework app first.
+- If this directory contains unrelated files, try a new directory for Storybook.
+[11:56:03.428] [INFO] Storybook collects completely anonymous usage telemetry. We use it to shape Storybook's roadmap and prioritize features. You can learn more, including how to opt out, at https://storybook.js.org/telemetry
